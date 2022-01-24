@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
+
+:root {
+	--clr-primary-200: #888686;
+	--clr-primary-400: #eb6a24;
+	--clr-neutral-100: rgb(43, 40, 40);
+	--clr-neutral-900: rgb(5, 1, 1);
+	--font-weight: 400;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	font-weight: var(--font-weight);
+	font-size: 1.3125rem;
+}
+
+.bg-light {
+	background-color: var(--clr-primary-200);
+}
+.bg-dark {
+	background-color: var(--clr-neutral-100);
+}
+.bg-brown {
+	background-color: var(--clr-neutral-900);
+	color: #ffffff;
+}
+
+header,
+section {
+	padding: 3rem 0;
+	text-align: center;
+}
+
+.container {
+	margin-inline: auto;
+	width: min(90%, 70.5rem);
+}
+
+.container img {
+	height: 20rem;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.container h2 {
+	margin-bottom: 1em;
+}
+
+.split {
+	display: flex;
+	flex-direction: column;
+}
+
+.bg-dark .container .split p {
+	margin-bottom: 1em;
+}
+
+@media (min-width: 40em) {
+	.split {
+		flex-direction: row;
+		text-align: center;
+	}
+
+	.split > * + * {
+		margin-left: 2em;
+	}
+}
